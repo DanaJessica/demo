@@ -36,4 +36,4 @@ export const CAROUSEL_DATA = [
   NewsCarousel[1],
   NewsCarousel[2],
   NewsCarousel[0],
-]
+];

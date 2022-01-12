@@ -8,20 +8,21 @@
   margin: 0 auto;
   padding: 20px 20px;
   ul {
+    margin-bottom: 35px;
     li {
       list-style: none;
       margin-bottom: 10px;
     }
   }
-  .addButton {
-    margin-left: 250px;
-  }
-  .addUsername {
-    margin-top: 50px;
+  input {
+    margin-right: 50px;
   }
   button {
     width: 70px;
     height: 30px;
-    margin: 10px 40px;
+    margin: 10px 240px;
+  }
+  .addBtn {
+    margin-bottom: 35px;
   }
 }

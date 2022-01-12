@@ -8,15 +8,20 @@ import { ServiceService } from '../service.service';
 })
 export class UsernameCopyComponent implements OnInit {
   users: any[] = [];
+  search: any[] = [];
 
   constructor(private serviceService: ServiceService) {}
 
   ngOnInit(): void {
     this.getUser();
+    this.getSearchUser();
   }
 
   getUser() {
     this.users = this.serviceService.getUsers();
-    console.log(this.users);
+  }
+
+  getSearchUser() {
+    this.search = this.serviceService.getSearchUser();
   }
 }

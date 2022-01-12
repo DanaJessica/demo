@@ -1,7 +1,12 @@
 <div class="usernameCopyBox">
   <ul>
     <li *ngFor="let item of users;let key = index">
-      NO{{key+1}}. {{item}}
+      NO{{key+1}}. {{item.username}}
+    </li>
+  </ul>
+  <ul class="searchBox">
+    <li *ngFor="let item of search">
+      {{item}}
     </li>
   </ul>
 </div>

@@ -8,30 +8,32 @@ import { ServiceService } from '../service.service';
 })
 export class UsernameComponent implements OnInit {
   users: any[] = [];
-  addUser!: object;
-  isSaveShow: boolean = false;
+  addUsername!: string;
+  addPassword!: string;
+  searchUser!: string;
 
   constructor(private serviceService: ServiceService) {}
 
   ngOnInit(): void {
-    this.getUser();
+    this.getUsers();
   }
 
-  getUser() {
+  getUsers() {
     this.users = this.serviceService.getUsers();
-    console.log(this.users);
   }
 
   add() {
-    this.isSaveShow = true;
+    this.serviceService.addUser(this.addUsername, this.addPassword);
+    this.addUsername = '';
+    this.addPassword = '';
   }
 
-  save() {
-    this.serviceService.addUser(this.addUser);
-    this.isSaveShow = false;
+  search(searchUser: string) {
+    this.serviceService.search(searchUser);
+    this.searchUser = '';
   }
 
-  cancel() {
-    this.isSaveShow = false;
+  trackByFn(index: any, item: any) {
+    return index;
   }
 }

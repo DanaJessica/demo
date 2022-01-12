@@ -1,15 +1,13 @@
 <div class="usernameBox">
   <ul>
-    <li *ngFor="let item of users;let key = index">
-      NO{{key+1}}. {{item}}
-      <input type="text" [(ngModel)]="users[key]">
+    <li *ngFor="let item of users;let key = index;trackBy:trackByFn">
+      NO{{key+1}}. {{item.username}}
+      <input type="text" [(ngModel)]="users[key].username">
     </li>
   </ul>
-  <button class="addButton" (click)="add()">add</button>
-  <div class="addUsername" *ngIf="isSaveShow==true">
-    username:
-    <input type="text" placeholder="username" [(ngModel)]="addUser">
-    <button (click)="save()">save</button>
-    <button (click)="cancel()">cancel</button>
-  </div>
+  <input type="text" placeholder="username" [(ngModel)]="addUsername">
+  <input type="password" placeholder="password" [(ngModel)]="addPassword">
+  <button class="addBtn" (click)="add()">add</button>
+  <input type="text" placeholder="username" [(ngModel)]="searchUser">
+  <button class="searchBtn" (click)="search(this.searchUser)">search</button>
 </div>

@@ -20,16 +20,20 @@ export class TestComponent implements OnInit {
 
   right() {
     const box = document.querySelector('ul') as unknown as HTMLParagraphElement;
-    this.curIndex++;
     if (this.curIndex === this.carouselData.length - 1) {
+      this.curIndex = 0;
+      box.style.transition = 'none';
+      box.style.left = `${-this.curIndex * 800}px`;
       setTimeout(() => {
-        box.style.transition = 'none';
-        this.curIndex = 0;
+        this.curIndex++;
+        box.style.transition = '1s ease';
         box.style.left = `${-this.curIndex * 800}px`;
-      }, 1000);
+      });
+    } else {
+      this.curIndex++;
+      box.style.transition = '1s ease';
+      box.style.left = `${-this.curIndex * 800}px`;
     }
-    box.style.transition = '1s ease';
-    box.style.left = `${-this.curIndex * 800}px`;
   }
 
   left() {
