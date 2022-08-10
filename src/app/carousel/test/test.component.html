@@ -1,0 +1,14 @@
+<div class="carouselBox" (click)="clickCarousel()">
+  <ul>
+    <li *ngFor="let item of carouselData">
+      <div class="carousel-content">
+        <div class="carousel-font">
+          <p class="carousel-title">{{item.title}}</p>
+          <p class="carousel-detail">{{item.content}}</p>
+        </div>
+        <img [src]="item.image" alt="">
+      </div>
+      <p class="carousel-url">{{item.url}}</p>
+    </li>
+  </ul>
+</div>
