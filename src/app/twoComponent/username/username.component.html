@@ -1,0 +1,15 @@
+<div class="usernameBox">
+  <ul>
+    <li *ngFor="let item of users;let key = index">
+      NO{{key+1}}. {{item}}
+      <input type="text" [(ngModel)]="users[key]">
+    </li>
+  </ul>
+  <button class="addButton" (click)="add()">add</button>
+  <div class="addUsername" *ngIf="isSaveShow==true">
+    username:
+    <input type="text" placeholder="username" [(ngModel)]="addUser">
+    <button (click)="save()">save</button>
+    <button (click)="cancel()">cancel</button>
+  </div>
+</div>

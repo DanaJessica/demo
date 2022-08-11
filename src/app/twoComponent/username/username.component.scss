@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.usernameBox {
+  width: 340px;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 20px 20px;
+  ul {
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+  }
+  .addButton {
+    margin-left: 250px;
+  }
+  .addUsername {
+    margin-top: 50px;
+  }
+  button {
+    width: 70px;
+    height: 30px;
+    margin: 10px 40px;
+  }
+}

@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.usernameCopyBox {
+  width: 340px;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin: 10px auto;
+  padding: 20px 20px;
+  ul {
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+  }
+}
