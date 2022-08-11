@@ -1,4 +1,4 @@
-<div class="carouselBox" (click)="clickCarousel()">
+<div class="carouselBox">
   <ul>
     <li *ngFor="let item of carouselData">
       <div class="carousel-content">
@@ -8,7 +8,12 @@
         </div>
         <img [src]="item.image" alt="">
       </div>
-      <p class="carousel-url">{{item.url}}</p>
+      <p class="carousel-url" (click)="clickCarousel()">{{item.url}}</p>
     </li>
   </ul>
+  <div class="playBtn">
+    <h2 class="leftBtn" (click)="left()">
+      <<</h2> <h2 class="rightBtn" (click)="right()">>>
+    </h2>
+  </div>
 </div>

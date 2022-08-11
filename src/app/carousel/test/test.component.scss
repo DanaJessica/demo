@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,14 +9,14 @@
   background-color: #2b3330;
   border-radius: 40px;
   padding: 42px 0 64px;
-  cursor: pointer;
   overflow: hidden;
+  position: relative;
   ul {
     display: flex;
     flex-direction: row;
     position: relative;
     left: 0;
-    li{
+    li {
       width: 720px;
       height: 164px;
       list-style: none;
@@ -56,15 +56,34 @@
         }
       }
     }
+    .carousel-url {
+      width: 80%;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #ffffff;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+    }
   }
-  .carousel-url {
-    width: 80%;
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #ffffff;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  .playBtn {
+    .leftBtn {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+    }
+    .rightBtn {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 95.5%;
+      cursor: pointer;
+    }
+  }
+  button {
+    position: absolute;
+    top: 100px;
   }
 }
